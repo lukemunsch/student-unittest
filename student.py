@@ -27,7 +27,7 @@ class Student:
         self.end_date += timedelta(days=days)
 
     def course_schedule(self):
-        response = requests.get(f"http://company.com/course-schedule/{self.student._last_name}/{self.student._first_name}")
+        response = requests.get(f"http://company.com/course-schedule/{self._last_name}/{self._first_name}")
 
         if response.ok:
             return response.text
